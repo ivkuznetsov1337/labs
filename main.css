@@ -6,20 +6,21 @@ body {
 }
 
 header {
-    background-color: black;
+    background: linear-gradient(to right bottom, red, 
+    orange, yellow, green, lightblue, blue, purple);
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
 }
 
 footer {
-    background-color: black;
-    color: lightgreen;
+    background: linear-gradient(to right bottom, red, 
+    orange, yellow, green, lightblue, blue, purple);
     padding: 10px;
     font-size: 16pt;
     text-align: right;
 }
-
+A
 a {
     text-decoration: none; 
     color: green;

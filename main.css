@@ -11,6 +11,14 @@ header {
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
+    transition: all 0.5s
+}
+
+header:hover {
+    font-size: 32pt;
+    color: white;
+    text-shadow: 0 0 1pt black;
+    transition: all 1s;
 }
 
 footer {
@@ -19,12 +27,18 @@ footer {
     padding: 10px;
     font-size: 16pt;
     text-align: right;
+    transition: all 0.5s;
+}
+
+footer:hover {
+    font-size: 25pt;
+    transition: all 1s;
 }
 
 a {
     text-decoration: none; 
     color: green;
-    transition: all 1s ease-in-out; 
+    transition: all 1s; 
 }
 
 a:visited {
@@ -36,7 +50,7 @@ a:hover {
     text-decoration: underline;
     background-color: white;
     font-weight: bold;
-    transition: all 0.3s 1s ease-in-out;
+    transition: all 0.3s 1s;
 }
 
 a:active {

@@ -47,6 +47,30 @@
             width: 99.1%;
             bottom: 0;           
         }
+        .picture {
+            width: max-content;
+            height: max-content;
+            position: absolute;
+            top: 30px;
+            right: 100px;
+        }
+        .cloudword {
+            width: max-content;
+            height: max-content;
+            border: 1px solid;
+            border-radius: 50%;
+            color: black;
+            font-size: 32pt;
+            padding: 10px;
+            position: absolute;
+            box-shadow: 2px 2px 5px rgba(0, 0, 255, 255)
+        }
+        .emptycloud {
+            border: 1px solid;
+            border-radius: 50%;
+            position: absolute;
+            box-shadow: 2px 2px 5px rgba(0, 0, 255, 255)
+        }
     </style>
 </head>
 <body>
@@ -123,6 +147,46 @@
             они похожи на организаторов концерта Стаса Михайлова? Все эти 
             тайны будут раскрыты.
         </div>
+        
+        <div class="picture">
+            <img src="comic1.jpg">
+        </div>
+
+        <div 
+        class="cloudword" style="
+        top: 142px;
+        right: 588px;
+        z-index: 4;"
+        >
+            .........
+        </div>
+        <div 
+        class="emptycloud" style="
+        top: 201px;
+        right: 559px;
+        width: 50px;
+        height: 25px;
+        z-index: 3;">
+        </div>
+        <div class="emptycloud" style="
+        top: 240px;
+        right: 520px;
+        width: 36px;
+        height: 21px;">
+        </div>
+        <div class="emptycloud" style="
+        top: 282px;
+        right: 472px;
+        width: 24px;
+        height: 18px;">
+        </div>
+        <div class="emptycloud" style="
+        top: 328px;
+        right: 417px;
+        width: 23px;
+        height: 20px;">
+        </div>
+        
     </main>
     <footer>
         &copy; Кузнецов Илья, ФБИ-12, 2 курс, 2023

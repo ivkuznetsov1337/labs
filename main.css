@@ -20,10 +20,11 @@ footer {
     font-size: 16pt;
     text-align: right;
 }
-A
+
 a {
     text-decoration: none; 
     color: green;
+    transition: all 1s ease-in-out; 
 }
 
 a:visited {
@@ -35,6 +36,7 @@ a:hover {
     text-decoration: underline;
     background-color: white;
     font-weight: bold;
+    transition: all 0.3s 1s ease-in-out;
 }
 
 a:active {

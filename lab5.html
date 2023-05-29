@@ -43,6 +43,26 @@
             let author='Привет!\nАвтор страницы:\nКузнецов Илья Владимирович';
             alert(author);
         }
+        function changeoutput(buttonNum, backColor, textColor, borderColor) {
+            let output=document.getElementById('output');
+            output.innerHTML='Нажата кнопка '+buttonNum;
+            output.style.backgroundColor=backColor;
+            output.style.color=textColor;
+            output.style.borderColor=borderColor;
+        }
+        function showres() {
+            let cost=document.getElementById('cost');
+            let inputa=document.getElementById('apple');
+            let inputb=document.getElementById('pear');
+            let inputc=document.getElementById('orange');
+            let inputd=document.getElementById('melon');
+            let a=parseInt(inputa.value);
+            let b=parseInt(inputb.value);
+            let c=parseInt(inputc.value);
+            let d=parseInt(inputd.value);
+            let totalCost=a*100+b*80+c*150+d*300;
+            cost.innerHTML='Общая цена '+totalCost;
+        }
     </script>
     <style>
         .message {
@@ -53,6 +73,26 @@
             cursor: pointer;
             margin: 5px;
             width: max-content;
+        }
+        
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
+        }
+        .cart {
+            border: 1px solid; 
+            height: 250px; 
+            width: 200px;
+            position: relative;
+            padding: 10px;
+            margin: 5px
+        }
+        #cost {
+            border: 0;
+            width: 300px;
+            height: 40px;
+            margin: 5px;
         }
     </style>
 </head>
@@ -69,7 +109,28 @@
         <div class="message" onclick="showsub()">Найти разность чисел</div>
         <div class="message" onclick="showmul()">Найти произведение чисел</div>
         <div class="message" onclick="showdiv()">Найти частное чисел</div>
-        <div class="message" onclick="showauthor()">Узнать, кто автор страницы</div>       
+        <div class="message" onclick="showauthor()">Узнать, кто автор страницы</div>
+        
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeoutput(1, 'red', 'yellow', 'black')">
+            <input type="button" value="Кнопка 2" onclick="changeoutput(2, 'black', 'lime', 'white')">
+            <input type="button" value="Кнопка 3" onclick="changeoutput(3, 'white', 'black', 'purple')">
+            <input type="button" value="Кнопка 4" onclick="changeoutput(4, 'purple', 'lightblue', 'lightblue')">
+        </div>
+        
+        <div id="output"></div>
+
+        <div class="cart">
+            Корзина товаров<br><br>
+            <label>Яблоки<input type="number" value="0" id="apple"></label><br>
+            <label>Груши<input type="number" value="0" id="pear"></label><br>
+            <label>Апельсины<input type="number" value="0" id="orange"></label><br>
+            <label>Дыни<input type="number" value="0" id="melon"></label><br>     
+            <input type="button" value="Рассчитать" onclick="showres()">
+            <div id="cost"></div>
+        </div>
+
+        
     </main>
 
     <footer onclick="showauthor()" style="cursor: pointer;">

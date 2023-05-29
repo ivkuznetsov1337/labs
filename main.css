@@ -35,6 +35,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 99.1%;
+    height: max-content;
 }
 
 footer:hover {

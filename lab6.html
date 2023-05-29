@@ -23,6 +23,13 @@
             width: max-content;
             background-color: #eef;
         }
+        .colorchange {
+            width: max-content;
+            height: max-content;
+            background-color: yellow;
+            color: black;
+            cursor: pointer;
+        }
     </style>
     <script>
         let number;
@@ -76,6 +83,33 @@
             showbutton.style.display=showb;
             hidebutton.style.display=hideb;
         }
+        function changeColor(div) {
+            if(div.style.backgroundColor=='yellow') {
+                div.style.backgroundColor='red';
+                div.style.color='lightblue';
+                document.getElementById('color-name').innerHTML='красный'
+            }
+            else if(div.style.backgroundColor=='red') {
+                div.style.backgroundColor='black';
+                div.style.color='white';
+                document.getElementById('color-name').innerHTML='чёрный';
+            }
+            else if(div.style.backgroundColor=='black') {
+                div.style.backgroundColor='purple';
+                div.style.color='lightgreen';
+                document.getElementById('color-name').innerHTML='фиолетовый';
+            }
+            else if(div.style.backgroundColor=='purple') {
+                div.style.backgroundColor='blue';
+                div.style.color='#eef';
+                document.getElementById('color-name').innerHTML='синий';
+            }
+            else {
+                div.style.backgroundColor='yellow';
+                div.style.color='black';
+                document.getElementById('color-name').innerHTML='жёлтый';
+            }
+        }
     </script>
 </head>
 <body>
@@ -123,6 +157,11 @@
                 <li>Нажмите кнопку "Сыграть еще раз", если хотите попробовать ещё раз</li>
                 <li>Чтобы скрыть правила нажмите на кнопку "Скрыть правила игры"</li>
             </ol>
+        </div>
+
+        <div ondblclick="changeColor(this)" class="colorchange">
+            Цвет: <span id="color-name">жёлтый</span><br>
+            Двойной щелчок для смены.
         </div>
     </main>
 

@@ -6,14 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кузнецов Илья Владимирович. Лабораторная работа 5</title>
     <link rel="stylesheet" href="main.css">
+    <script>
+        function showsum() {
+            let a=5154;
+            let b=7891;
+            let result=a+b;
+            alert('Сумма '+5154+' и '+7891+' равна '+result);
+        }        
+    </script>
+    <style>
+        .message {
+            border: 1px solid;
+            background-color: #dff;
+            display: inline-block;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         НГТУ, ФБ, Лабораторная работа 2
     </header>
     
     <main>
-
+        <div class="message" onclick="showsum()">Сколько будет 5154+7891?</div>
+        <div class="message">Узнать, кто автор страницы</div>
     </main>
 
     <footer>

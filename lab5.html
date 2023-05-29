@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="main.css">
     <script>
         function showsum() {
-            let a=5154;
-            let b=7891;
+            let inputa=document.getElementById('numbera');
+            let inputb=document.getElementById('numberb');
+            let a=parseInt(inputa.value);
+            let b=parseInt(inputb.value);
             let result=a+b;
-            alert('Сумма '+5154+' и '+7891+' равна '+result);
+            alert('Сумма '+a+' и '+b+' равна '+result);
         }        
         function showauthor() {
             let author='Привет!\nАвтор страницы:\nКузнецов Илья Владимирович';
@@ -36,7 +38,9 @@
     </header>
     
     <main>
-        <div class="message" onclick="showsum()">Сколько будет 5154+7891?</div>
+        <label>Первое число: <input type="number" value="5154" id="numbera"></label><br>
+        <label>Второе число: <input type="number" value="7891" id="numberb"></label><br>
+        <div class="message" onclick="showsum()">Найти сумму чисел</div>
         <div class="message" onclick="showauthor()">Узнать, кто автор страницы</div>
     </main>
 

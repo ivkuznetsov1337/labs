@@ -14,7 +14,31 @@
             let b=parseInt(inputb.value);
             let result=a+b;
             alert('Сумма '+a+' и '+b+' равна '+result);
-        }        
+        }       
+        function showsub() {
+            let inputa=document.getElementById('numbera');
+            let inputb=document.getElementById('numberb');
+            let a=parseInt(inputa.value);
+            let b=parseInt(inputb.value);
+            let result=a-b;
+            alert('Разность '+a+' и '+b+' равна '+result);
+        }
+        function showmul() {
+            let inputa=document.getElementById('numbera');
+            let inputb=document.getElementById('numberb');
+            let a=parseInt(inputa.value);
+            let b=parseInt(inputb.value);
+            let result=a*b;
+            alert('Произведение '+a+' и '+b+' равно '+result);
+        }
+        function showdiv() {
+            let inputa=document.getElementById('numbera');
+            let inputb=document.getElementById('numberb');
+            let a=parseInt(inputa.value);
+            let b=parseInt(inputb.value);
+            let result=a/b;
+            alert('Частное '+a+' и '+b+' равно '+result);
+        }
         function showauthor() {
             let author='Привет!\nАвтор страницы:\nКузнецов Илья Владимирович';
             alert(author);
@@ -24,10 +48,11 @@
         .message {
             border: 1px solid;
             background-color: #dff;
-            display: inline-block;
             padding: 5px;
             border-radius: 10px;
             cursor: pointer;
+            margin: 5px;
+            width: max-content;
         }
     </style>
 </head>
@@ -41,7 +66,10 @@
         <label>Первое число: <input type="number" value="5154" id="numbera"></label><br>
         <label>Второе число: <input type="number" value="7891" id="numberb"></label><br>
         <div class="message" onclick="showsum()">Найти сумму чисел</div>
-        <div class="message" onclick="showauthor()">Узнать, кто автор страницы</div>
+        <div class="message" onclick="showsub()">Найти разность чисел</div>
+        <div class="message" onclick="showmul()">Найти произведение чисел</div>
+        <div class="message" onclick="showdiv()">Найти частное чисел</div>
+        <div class="message" onclick="showauthor()">Узнать, кто автор страницы</div>       
     </main>
 
     <footer onclick="showauthor()" style="cursor: pointer;">

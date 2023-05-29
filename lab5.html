@@ -13,6 +13,10 @@
             let result=a+b;
             alert('Сумма '+5154+' и '+7891+' равна '+result);
         }        
+        function showauthor() {
+            let author='Привет!\nАвтор страницы:\nКузнецов Илья Владимирович';
+            alert(author);
+        }
     </script>
     <style>
         .message {
@@ -33,10 +37,10 @@
     
     <main>
         <div class="message" onclick="showsum()">Сколько будет 5154+7891?</div>
-        <div class="message">Узнать, кто автор страницы</div>
+        <div class="message" onclick="showauthor()">Узнать, кто автор страницы</div>
     </main>
 
-    <footer>
+    <footer onclick="showauthor()" style="cursor: pointer;">
         &copy; Кузнецов Илья, ФБИ-12, 2 курс, 2023
     </footer>
 </body>

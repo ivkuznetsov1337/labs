@@ -32,6 +32,9 @@ footer {
     font-size: 16pt;
     text-align: right;
     transition: all 0.5s;
+    position: fixed;
+    bottom: 0;
+    width: 99.1%;
 }
 
 footer:hover {

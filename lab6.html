@@ -30,6 +30,26 @@
             color: black;
             cursor: pointer;
         }
+        .rotatingblock {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            border: 1px solid;
+            background-color: #eef;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 200px;
+            cursor: pointer;
+            transition: 1s;
+            left: 20px;
+        }
+        .expandingblock {
+            width: 100px;
+            height: 50px;
+            background-color: black;
+            cursor: pointer;
+            border: 1px solid;
+        }
     </style>
     <script>
         let number;
@@ -40,7 +60,6 @@
             screens[0].style.display='none';
             screens[1].style.display='block';
             screens[2].style.display='none';
-            alert(number)
         }
         function guess() {
             count++;
@@ -110,6 +129,17 @@
                 document.getElementById('color-name').innerHTML='жёлтый';
             }
         }
+        function moveblock() {
+            let mblock=document.getElementById('movingblock');
+            if(mblock.style.left=='20px') {
+                mblock.style.left='700px';
+                mblock.style.transform='rotate(0)';
+                return
+            }
+            else
+                mblock.style.left='20px';
+                mblock.style.transform='rotate(720deg)';           
+        }
     </script>
 </head>
 <body>
@@ -163,6 +193,12 @@
             Цвет: <span id="color-name">жёлтый</span><br>
             Двойной щелчок для смены.
         </div>
+
+        <div class="rotatingblock" onclick="moveblock()" id="movingblock" style="left: 20px; transform: rotate(720deg);">
+            Щелкни меня
+        </div>
+
+        <div class="expandingblock"></div>
     </main>
 
     <footer>

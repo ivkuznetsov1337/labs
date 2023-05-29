@@ -63,6 +63,11 @@
             let totalCost=a*100+b*80+c*150+d*300;
             cost.innerHTML='Общая цена '+totalCost;
         }
+        function disappear(circleNum) {
+            let id='circle'+circleNum;
+            let circle=document.getElementById(id);
+            circle.style.display='none';
+        }
     </script>
     <style>
         .message {
@@ -93,6 +98,16 @@
             width: 300px;
             height: 40px;
             margin: 5px;
+        }
+        .circle {
+            border: 1px solid;
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            font-size: 32pt;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -130,7 +145,16 @@
             <div id="cost"></div>
         </div>
 
-        
+        <div class="circle" onclick="disappear(1)" id="circle1" style="background-color: purple;">1</div>
+        <div class="circle" onclick="disappear(2)" id="circle2" style="background-color: azure;">2</div>
+        <div class="circle" onclick="disappear(3)" id="circle3" style="background-color: rgb(34, 80, 80);">3</div>
+        <div class="circle" onclick="disappear(4)" id="circle4" style="background-color: rgb(89, 133, 69);">4</div>
+        <div class="circle" onclick="disappear(5)" id="circle5" style="background-color: rgb(100, 51, 90);">5</div>
+        <div class="circle" onclick="disappear(6)" id="circle6" style="background-color: rgb(224, 166, 174);">6</div>
+        <div class="circle" onclick="disappear(7)" id="circle7" style="background-color: rgb(114, 134, 22);">7</div>
+        <div class="circle" onclick="disappear(8)" id="circle8" style="background-color: rgb(184, 178, 212);">8</div>
+        <div class="circle" onclick="disappear(9)" id="circle9" style="background-color: rgb(111, 148, 170);">9</div>
+        <div class="circle" onclick="disappear(10)" id="circle10" style="background-color: rgb(255, 0, 212);">10</div>       
     </main>
 
     <footer onclick="showauthor()" style="cursor: pointer;">

@@ -52,6 +52,16 @@
             margin-top: 50px;
             color: white;
         }
+        .filter {
+            border: 1px solid;
+            height: max-content;
+            width: max-content;
+            padding: 5px;
+            text-align: center;
+        }
+        #wear {
+            height: 200px;
+        }
     </style>
     <script>
         let number;
@@ -155,6 +165,38 @@
             document.getElementById('bsize').innerHTML=size+'px'
             }
         }
+        function filter() {
+            let color=document.getElementById('wear-color').value;
+            let type=document.getElementById('wear-type').value;
+            let image=document.getElementById('wear')
+            if(color=='Красный' && type=='Футболка') {
+                image.src='redf.jpg'
+            }
+            else if(color=='Красный' && type=='Майка') {
+                image.src='redm.jpg'
+            }
+            else if(color=='Красный' && type=='Поло') {
+                image.src='redp.jpg'
+            }
+            else if(color=='Белый' && type=='Футболка') {
+                image.src='whitef.jpg'
+            }
+            else if(color=='Белый' && type=='Майка') {
+                image.src='whitem.jpg'
+            }
+            else if(color=='Белый' && type=='Поло') {
+                image.src='whitep.webp'
+            }
+            else if(color=='Чёрный' && type=='Футболка') {
+                image.src='blackf.webp'
+            }
+            else if(color=='Чёрный' && type=='Поло') {
+                image.src='blackp.jpg'
+            }
+            else {
+                image.src='blackm.jpg'
+            }
+        }
     </script>
 </head>
 <body>
@@ -173,7 +215,7 @@
             <h1>Угадай число!</h1>
             <div>
                 Задумано число от 1 до 100. Угадайте, какое?<br>
-                <input type="number" value="" min="1" max="100" id="user-number"><br>
+                <input type="number" min="1" max="100" id="user-number"><br>
                 <button onclick="guess()">Угадать</button>
                 <div id="result"></div>
             </div>
@@ -215,6 +257,26 @@
 
         <div onclick="expandblock()" id="expandingblock">
             Размер: <span id="bsize">100px</span>
+        </div>
+
+        <div class="filter">
+            Цвет одежды:
+            <select id="wear-color">
+                <option>Красный</option>
+                <option>Белый</option>
+                <option>Чёрный</option>
+            </select><br>
+
+            Тип одежды:
+            <select id="wear-type">
+                <option>Футболка</option>
+                <option>Поло</option>
+                <option>Майка</option>
+            </select><br>
+
+            <button onclick="filter()">OK</button><br>
+
+            <img id="wear" src="redf.jpg">
         </div>
     </main>
 

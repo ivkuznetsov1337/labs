@@ -18,7 +18,11 @@ header:hover {
     font-size: 32pt;
     color: white;
     text-shadow: 0 0 1pt black;
-    transition: all 1s;
+    transition: all 1s 0.3s;
+}
+
+main {
+    margin: 10px 20px;
 }
 
 footer {
@@ -32,7 +36,7 @@ footer {
 
 footer:hover {
     font-size: 25pt;
-    transition: all 1s;
+    transition: all 1s 0.3s;
 }
 
 a {

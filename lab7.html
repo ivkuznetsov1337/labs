@@ -69,6 +69,55 @@
                 div.appendChild(block);
             }
         }
+        function stock() {
+            document.getElementById('stocktable').style.display=('block');
+            let info=document.getElementById('stockinfo');
+            let price=[2601, 2608, 2675,2649,2737.5,3049,3082.5,3033.5,3027,3070.5];
+            let date=['22-05-2023','23-05-2023','24-05-2023','25-05-2023'
+            ,'26-05-2023','29-05-2023','30-05-2023','31-05-2023','01-06-2023',
+            '02-06-2023'];
+            let table=document.getElementById('stocktable');
+            let change=[];
+            for(i=1; i<11; i++) {
+                if (i==10) {
+                    a='-'
+                    change.push(a); 
+                }
+                else {
+                    let a=price[i]-price[i-1];
+                    change.push(a); 
+                }  
+            }
+            for(i=0; i<price.length; i++) {
+                tddata=document.createElement('td');
+                tdprice=document.createElement('td');
+                tdchange=document.createElement('td');
+                tr=document.createElement('tr');
+                tddata.innerHTML=(date[i]);
+                tdprice.innerHTML=(price[i]);
+                tdchange.innerHTML=(change[i]);
+                tr.appendChild(tddata);
+                tr.appendChild(tdprice);
+                tr.appendChild(tdchange);
+                table.appendChild(tr);
+            }     
+            let sum=0;
+            for(i=0; i<price.length; i++){
+            sum=sum+price[i];
+            }
+            let avg=sum/price.length;
+            let min=Math.min.apply(null,price);
+            let max=Math.max.apply(null,price);
+            let avgtext=document.createElement('div');
+            let mintext=document.createElement('div');
+            let maxtext=document.createElement('div');
+            avgtext.innerHTML='Среднее значение '+avg;
+            mintext.innerHTML='Минимальное значение '+min;
+            maxtext.innerHTML='Максимальное значение '+max;
+            info.appendChild(avgtext);
+            info.appendChild(mintext);
+            info.appendChild(maxtext);
+        }
     </script>
     <style>
         .circle {
@@ -106,6 +155,18 @@
 
         <button onclick="multip()">Умножение на 49</button>
         <div id="multiptable"></div>
+
+        <button onclick="stock()">Курс акций ГК "Самолёт"</button>
+        <div  id="stockinfo">
+            <table border="1" style="display: block; width: max-content;" 
+            id="stocktable">
+                <tr>
+                    <td>Дата</td>
+                    <td>Цена</td>
+                    <td>Изменение</td>
+                </tr>
+            </table>
+        </div>
     </main>
 
     <footer>

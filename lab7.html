@@ -43,7 +43,39 @@
             }
             
         }
+        function redgreen() {
+            let div=document.getElementById('redgreendiv');
+            let input=document.getElementById('redgreeninput')
+            div.innerHTML='';
+            for(i=input.value; i>0; i--) {
+                let block=document.createElement('div');
+                block.className='circle';
+                block.innerHTML=i;
+                if (i%2==0) {
+                    block.style.backgroundColor=('green');
+                    div.appendChild(block);
+                }
+                else {
+                block.style.backgroundColor=('red');
+                div.appendChild(block);
+                }
+            }
+        }
     </script>
+    <style>
+        .circle {
+            height: 40px;
+            width: 40px;
+            border: 1px solid;
+            border-radius: 100%;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 40px;  
+            margin: 10px 3px 3px 3px;
+               
+            display: inline-block;       
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -60,6 +92,10 @@
         
         <button onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
         <div id="transparent-blocks"></div>
+
+        <input type="number" value="5" placeholder="Введите число кругов" id="redgreeninput"><br>
+        <button onclick="redgreen()">Красное/зелёное</button>
+        <div id="redgreendiv"></div>
     </main>
 
     <footer>

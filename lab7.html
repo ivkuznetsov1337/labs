@@ -61,6 +61,14 @@
                 }
             }
         }
+        function multip() {
+            let div=document.getElementById('multiptable');
+            for(i=13; i<33; i++) {
+                let block=document.createElement('div');
+                block.innerHTML=i+'*49= '+(i*49);
+                div.appendChild(block);
+            }
+        }
     </script>
     <style>
         .circle {
@@ -71,8 +79,7 @@
             text-align: center;
             vertical-align: middle;
             line-height: 40px;  
-            margin: 10px 3px 3px 3px;
-               
+            margin: 10px 3px 3px 3px; 
             display: inline-block;       
         }
     </style>
@@ -96,6 +103,9 @@
         <input type="number" value="5" placeholder="Введите число кругов" id="redgreeninput"><br>
         <button onclick="redgreen()">Красное/зелёное</button>
         <div id="redgreendiv"></div>
+
+        <button onclick="multip()">Умножение на 49</button>
+        <div id="multiptable"></div>
     </main>
 
     <footer>

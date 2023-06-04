@@ -7,6 +7,25 @@
     <title>Кузнецов Илья Владимирович. Лабораторная работа 8</title>
     <link rel="stylesheet" href="main.css">
     <script src="lab8.js"></script>
+    <style>
+        .birthdayout {
+            margin: 10px;
+            padding: 10px;
+            background-color: green;
+            width: max-content;
+            border-radius: 10px;
+            color: white;
+        }
+        button {
+            border-radius: 10px;
+            cursor: pointer;
+            padding: 5px;
+            background-color: white;
+        }
+        input[type=date]{
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body onload="showDate()">
     <header>
@@ -15,6 +34,14 @@
 
     <main>
         <div id="current-date"></div>
+        <div>
+            <label>Дата рождения: <input type="date" value="2004-03-23"></label>
+        </div>
+        <div>
+            <button onclick="showDaysCount()">Показать число дней</button>
+        </div>
+        <button onclick="clearbirthday()">Очистить</button>
+        <div id="birthdayout"></div>
     </main>
 
     <footer>
